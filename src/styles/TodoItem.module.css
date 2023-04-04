@@ -21,6 +21,10 @@
   margin-inline: 10px;
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
 .content button {
   cursor: pointer;
   background: transparent;

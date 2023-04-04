@@ -30,7 +30,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
             checked={itemProp.completed}
             onChange={() => handleChange(itemProp.id)}
           />
-          <p className={itemProp.completed ? 'completed' : null}>
+          <p className={itemProp.completed ? styles.completed : null}>
             {itemProp.title}
           </p>
         </span>
