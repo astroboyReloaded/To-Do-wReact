@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import styles from '../styles/TodoItem.module.css';
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+
+const TodoItem = ({
+  itemProp, handleChange, delTodo, setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
 
   const handleEditing = () => {
     setEditing(true);
   };
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   if (editing) {
     viewMode.display = 'none';
   } else {
