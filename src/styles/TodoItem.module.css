@@ -5,12 +5,14 @@
   border-bottom: 1px solid #fff;
   background: #f0efef;
 }
+
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
+
 .content span {
   order: 1;
   display: flex;
