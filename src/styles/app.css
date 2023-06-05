@@ -45,11 +45,11 @@ body {
 }
 
 .input-submit {
+  display: flex;
   background: transparent;
   color: #5b5b5b;
-  text-transform: capitalize;
+  align-items: center;
   cursor: pointer;
-  font-weight: 600;
   margin-right: 10px;
 }
 
