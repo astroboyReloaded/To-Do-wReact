@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
 import styles from '../styles/TodoItem.module.css';
@@ -6,9 +6,33 @@ import styles from '../styles/TodoItem.module.css';
 const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   const [editing, setEditing] = useState(false);
 
+  const editInputRef = useRef();
+
+  useEffect(() => {
+    const unableEditing = (e) => {
+      if (
+        editing &&
+        editInputRef.current &&
+        !editInputRef.current.contains(e.target)
+      ) {
+        setEditing(false);
+      }
+    };
+    document.addEventListener('mousedown', unableEditing);
+    document.addEventListener('keypress', unableEditing);
+
+    return () => {
+      document.removeEventListener('mousedown', unableEditing);
+    };
+  });
+
   const handleEditing = () => {
     setEditing(true);
   };
+
+  useEffect(() => {
+    editing && editInputRef.current.focus();
+  }, [editing]);
 
   let viewMode = {};
   let editMode = {};
@@ -47,6 +71,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
         </span>
       </div>
       <input
+        ref={editInputRef}
         onChange={(e) => setUpdate(e.target.value, itemProp.id)}
         type="text"
         value={itemProp.title}
