@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <br/>
+  <h3><b>To Do List</b></h3>
+</div>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [👥 Author](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- PROJECT DESCRIPTION -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📖 To Do List <a name="about-project"></a>
 
-### `npm test`
+"To Do List" is a SPA that allows you to add, remove, edit and mark as checked tasks for you to follow. This project is build with **React.js** and `create-react-app` and React's **BrowserRouter**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> <br> For future implementations, please go to the [Future Features](#future-features) section. <!--[Click here to see the Live Demo](https://astroboyreloaded.github.io/).-->
 
-### `npm run build`
+## 🛠 Built With <a name="built-with"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tech Stack <a name="tech-stack"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://https://html5.org//">HTML 5</a></li>
+    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS 3</a></li>
+    <li><a href="https://react.dev/">React.js</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+  </ul>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- Features -->
 
-### `npm run eject`
+### Key Features <a name="key-features"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Components.
+- Events.
+- Fetch data from API.
+- Full website with routes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- LIVE DEMO -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Live Demo Link comming soon!
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [HTML](https://www.w3.org/html/) + [CSS](https://www.w3.org/Style/CSS/Overview.en.html) + [JavaScript](https://www.javascript.com/) + [React.js](https://react.dev/)
+- Make sure you have **Node.js** installed. Check this by running:
+```hs
+node -v
+```
+If you have it, it will display the Node version you have, if not, go to [this website](https://nodejs.org/en) to download it. I recomend you get the "Recomended For Most Users" version.
+### Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- If you wish to work from this project by editing it's code:
 
-### Code Splitting
+```sh
+git clone https://github.com/astroboyReloaded/To-Do-wReact.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Install
 
-### Analyzing the Bundle Size
+Install all dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+npm install
+```
 
-### Making a Progressive Web App
+### Usage
+- To get open this app in your local environment, plese run the next command:
+```hs
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- AUTHORS -->
 
-### Advanced Configuration
+## Author <a name="authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **astroboyReloaded**
 
-### Deployment
+- GitHub: [astroboyReloaded](https://github.com/astroboyReloaded)
+- Twitter: [@astroboyReload](https://twitter.com/astroboyReload)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/astroboyreloaded/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- FUTURE FEATURES -->
 
-### `npm run build` fails to minify
+## 🔭 Future Features <a name="future-features"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Personal style
+- Extra UI/UX features
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Please let me know if you find any issues in this repo's code!
+Feel free to check the [issues page](../../issues/).
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like my work on this project, please give me a star on this repo. I would also love to read your comment letting me know what you think!
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Thanks to [Microverse](https://www.microverse.org/) for giving me a path to follow in this learning journey!
+> Thanks to my mates, who walk by and share they experiences and knowledge with me during this journey: you make this experience even more valuable!
+> Thanks to [GitHub](https://github.com/) for being so awesome!
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+[MIT](https://mit-license.org/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
