@@ -2,25 +2,16 @@ import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import InputTodo from './InputTodo';
 import TodosList from './TodosList';
+import { json } from 'react-router-dom';
 
 const TodosLogic = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: uuidv4(),
-      title: 'Setup development environment',
-      completed: true,
-    },
-    {
-      id: uuidv4(),
-      title: 'Develop website and add content',
-      completed: false,
-    },
-    {
-      id: uuidv4(),
-      title: 'Deploy to live server',
-      completed: false,
-    },
-  ]);
+  const getInitialTodos = () => {
+    const itemsInLS = localStorage.getItem('todos');
+    const todsObject = JSON.parse(itemsInLS);
+    return todsObject || [];
+  };
+
+  const [todos, setTodos] = useState(getInitialTodos());
 
   useEffect(() => {
     const stringTodos = JSON.stringify(todos);
