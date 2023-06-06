@@ -7,7 +7,6 @@ const TodosLogic = () => {
   const getInitialTodos = () => {
     const itemsInLS = localStorage.getItem('todos');
     const todosObject = JSON.parse(itemsInLS);
-    console.log(todosObject);
     return todosObject || [];
   };
 

@@ -4,7 +4,12 @@ import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
 import styles from '../styles/TodoItem.module.css';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({
+  itemProp,
+  handleChange,
+  delTodo,
+  setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
 
   const editInputRef = useRef();
@@ -12,9 +17,9 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   useEffect(() => {
     const unableEditing = (e) => {
       if (
-        editing &&
-        editInputRef.current &&
-        !editInputRef.current.contains(e.target)
+        editing
+        && editInputRef.current
+        && !editInputRef.current.contains(e.target)
       ) {
         setEditing(false);
       }
@@ -89,6 +94,12 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
 export default TodoItem;
 
 TodoItem.propTypes = {
-  itemProp: PropTypes.object.isRequired,
+  itemProp: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    completed: PropTypes.bool,
+  }).isRequired,
+  handleChange: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
   setUpdate: PropTypes.func.isRequired,
 };
