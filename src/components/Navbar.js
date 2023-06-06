@@ -30,7 +30,11 @@ const Navbar = () => {
 
   return (
     <nav ref={ref} className="navbar">
-      <button className="toggle" onClick={() => setNavbarOpen((prev) => !prev)}>
+      <button
+        type="button"
+        className="toggle"
+        onClick={() => setNavbarOpen((prev) => !prev)}
+      >
         {navbarOpen ? (
           <MdClose style={menuStyle} />
         ) : (
@@ -38,15 +42,13 @@ const Navbar = () => {
         )}
       </button>
       <ul className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}>
-        {links.map((link) => {
-          return (
-            <li key={link.text}>
-              <NavLink to={link.path} onClick={() => setNavbarOpen(false)}>
-                {link.text}
-              </NavLink>
-            </li>
-          );
-        })}
+        {links.map((link) => (
+          <li key={link.text}>
+            <NavLink to={link.path} onClick={() => setNavbarOpen(false)}>
+              {link.text}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
 import styles from '../styles/TodoItem.module.css';
@@ -31,11 +32,13 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   };
 
   useEffect(() => {
-    editing && editInputRef.current.focus();
+    if (editing) {
+      editInputRef.current.focus();
+    }
   }, [editing]);
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   if (editing) {
     viewMode.display = 'none';
   } else {
@@ -62,10 +65,10 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
           </p>
         </span>
         <span>
-          <button onClick={handleEditing}>
+          <button type="button" onClick={handleEditing}>
             <AiFillEdit className={styles.toDoBtn} />
           </button>
-          <button onClick={() => delTodo(itemProp.id)}>
+          <button type="button" onClick={() => delTodo(itemProp.id)}>
             <FaTrash className={styles.toDoBtn} />
           </button>
         </span>
@@ -82,4 +85,10 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
     </li>
   );
 };
+
 export default TodoItem;
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.object.isRequired,
+  setUpdate: PropTypes.func.isRequired,
+};
