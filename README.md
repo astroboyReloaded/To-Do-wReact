@@ -55,6 +55,9 @@
 - Components.
 - Events.
 - Fetch data from API.
+- Hamburger menu.
+- Save state to `localStorage`.
+- Extra UI/UX features.
 - Full website with routes.
 
 <!-- LIVE DEMO -->
@@ -108,8 +111,7 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Personal style
-- Extra UI/UX features
+- Personal style.
 
 <!-- CONTRIBUTING -->
 
